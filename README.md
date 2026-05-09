@@ -3,7 +3,7 @@ RealGoTopUpGateway is a secure smart contract for native currency and ERC20 toke
 
 > A secure gateway contract for handling **native currency** and **ERC20 token deposits**, with role-based access control, whitelist management, and emergency stop features.
 
----
+
 
 ## 🚀 Features
 - ✅ **Native currency deposits** (ETH/BNB) with treasury forwarding  
@@ -13,7 +13,7 @@ RealGoTopUpGateway is a secure smart contract for native currency and ERC20 toke
 - ✅ **Rescue functions** for mistakenly sent tokens or native currency  
 - ✅ **Event logging** for all deposits and management actions  
 
----
+
 
 ## 🛠️ Tech Stack
 - Solidity `^0.8.20`  
@@ -23,7 +23,7 @@ RealGoTopUpGateway is a secure smart contract for native currency and ERC20 toke
   - SafeERC20  
   - Address  
 
----
+
 
 ## 📦 Installation
 Clone the repository and install dependencies:
@@ -40,7 +40,7 @@ Compile contracts:
 npx hardhat compile
 ```
 
----
+
 
 ## 📜 Contract Overview
 
@@ -57,7 +57,7 @@ npx hardhat compile
 - **rescueToken(token, amount)** → Rescue ERC20 tokens sent by mistake  
 - **rescueNative(amount)** → Rescue native currency sent by mistake  
 
----
+
 
 ## 📊 Events
 - **DepositNative**: Logs native currency deposits  
@@ -67,7 +67,7 @@ npx hardhat compile
 - **EmergencyStopped**: Logs emergency stop  
 - **RescueToken / RescueNative**: Logs rescue operations  
 
----
+
 
 ## 💻 Example Usage
 
@@ -114,20 +114,19 @@ gateway.rescueToken(tokenAddress, 500 * 1e18);
 gateway.rescueNative(2 ether);
 ```
 
----
 
 ## 🔒 Security Notes
 - Always restrict **DEFAULT_ADMIN_ROLE** to a secure multisig wallet.  
 - Use **ADMIN_ROLE** for day-to-day operations.  
 - Emergency stop is **irreversible** — once triggered, deposits cannot resume.  
 
----
+
 
 ## 📬 Contact
 For inquiries or integration support:  
 📧 **gm@realgo.game**
 
----
+
 
 ## 🏷️ Badges
 ![Solidity](https://img.shields.io/badge/Solidity-%5E0.8.20-blue?style=for-the-badge&logo=solidity)
